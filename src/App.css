@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
 }
 
 .hero .right-div img {
@@ -63,6 +63,10 @@
   background-color: transparent;
 }
 
+.search-div input:focus {
+  outline: none;
+}
+
 .hero-header {
   font-weight: bold;
   font-size: 4rem;
@@ -74,7 +78,7 @@
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -140,8 +144,44 @@
 
 .books-page {
   width: 100%;
+  display: flex;
 }
 
 .sidebar {
-  width: 10rem;
+  width: 20%;
+  padding: 2rem;
+
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar h3 {
+  margin: 2rem 0;
+}
+
+.sidebar-list p {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.active-genre {
+  border-left: 2px solid #FF971D;
+  background-color: #fff;
+}
+
+.books-list {
+  margin: 4rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
